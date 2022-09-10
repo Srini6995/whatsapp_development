@@ -33,6 +33,7 @@ void-null
 int 
 float
 double
+
 char
 long
 
@@ -564,6 +565,7 @@ linkedhashmap methods:
 10.values()-to get all values
 11.entryset()-to all keys and values 
 
+COLLECTION CONCEPT NOT AVAILABLE.
 
 
 
