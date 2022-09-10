@@ -1,0 +1,638 @@
+programming-set of instructons
+language-communication
+
+java 
+object
+platform independent
+high level language
+
+
+object-state and behaviour
+
+packages:
+collection of similar classes
+pascal case
+starts with com. or org
+
+class:
+combination of data and methods in sigle entity is called class
+camel case
+
+
+main method():
+entry point of execution
+jvm searches main method first
+
+
+wrraper class:
+classes of primitive datatypes
+
+
+return types:
+void-null
+int 
+float
+double
+char
+long
+
+Constructor:
+block of code that initializes the newly created object
+
+properties of constructor:
+constructor must have the same name as the class name
+must not have explicit return type
+cannot be abstract, static,final,synchronized
+
+types:
+default-
+1.when we dont provide any constructor,compiler will provide one.
+2.we cant see with naked eyes.it will be in class file.
+3.it is used to provide default values to objects
+
+no argument
+it allow us to write logic when object is created.
+when we create constructor, compiler will not create default constructor
+non-parameterized constructor
+
+parameterized constructor:
+it has arguments
+
+Constructor overloading:
+based on parameters passed
+
+super keyword:
+1.super keyword is used to access the parent class properties
+2.by default it is declared in the child class constructor.
+
+
+this keyword:
+1.used access the current class data and properties.
+
+
+conditional statement:
+if-else
+switch case
+
+looping statement:
+for and for each
+while:
+entry control
+do while:
+it will execute the loop one time and then check the condition
+exit control
+iterator
+
+
+static keyword:
+________________
+
+can be used with class, variable,method, block
+belong to the class instead of a specific instance.
+this means if you make a member static, you can access it without object 
+
+static method:
+we can call a static method without using an object
+we can call a static method from non-static method but otherwise.
+
+static block:
+1.is a block of code.it additionally has a keyword static.
+2.class can have multiple static blocks.
+3.static block is used to initialize static variables.
+4.gets executed when class is loaded in the memory
+
+static variable:
+1.common to all the instances of the class because it is a class level variable.
+2.only a single copy of static variable is created and shared among all the instances of the class.
+
+inheritance(is a relationship):
+_______________________________
+1.process of acquiring the properties(data+methods) of another class
+2.keyword-extends
+
+types:
+single:
+A->B
+
+multilevel:
+A->B->C
+
+multiple:(not supported in java)
+A+B->C(inerface)
+
+heirarchial:
+A->B,A->C,A->D
+
+
+acess modifiers:
+___________________
+
+private:
+1.only within the class in which they are created
+
+default:
+1.when no access modifiers is specified
+2.same class and same package
+
+protected:
+1.same class,same package and sub classes
+
+public:
+1.same class,same package,sub class and other packages.
+
+
+
+polymorphism:
+______________
+
+1.capability of performing diffenent actions based on the objects that it is acting upon.
+
+types:
+1.static/compile/early binding/over loading
+2.dynamic/runtime/late binding/over riding
+
+over loading:
+1.method name should be same with difference arguments
+2.happens at compile time
+3.done in the same class.
+
+over riding:
+1.when a child class not satisfied by the implementation given by the parent class.so it overrides it.
+2.no change in anything
+3.happens at run time
+4.done in the parent/child relationship.
+
+difference:
+
+Aspects                         overloading                overridding
+
+name of the method   ------     should be same             should be same
+
+arguument type       ------     should be different        should be same
+
+return type          ------     can be anything            should be same
+
+access modifiers     ------     can be anything            child should have equal or greater modifiers
+
+throwing exeception  ------     can be anything            child should have equal or greater exeception
+
+privated method      ------     we can overload            can't override 
+
+
+
+ABSTRACTION:
+
+hiding the implementation   details
+
+1.Abstract class(0 to 100%)
+2.interface(100%)
+
+ABSTRACT CLASS:
+1.if a class is having unimplemented methods then the class should be declared abstract.
+2.if a class is having even one abstract method then the class should be declared abstract.
+3.it may or may not have implementation methods.
+4.a class can be declared abstract even if doesn't have abstract methods.
+5.we can't creat object for abract class.
+6.if a child does not implement all the methods from parent class then the child class must need to be declared as abstract as well.
+7.extends-keyword
+
+
+INTERFACE:
+1.like a class but not a class.
+2.but it have variables and methods like class.
+3.variable are static,final,public by default.
+4.the methods declared in the interface are abstract and public by default.
+5.can't creat object.
+6.interface can extends an interface but a class should always implements an interface.
+
+marker interface:
+1.an empty interface is known as tag or marker interface.
+ex:serializable,cloneable
+
+
+ENCAPSULATION:
+Process of binding data and methods together into a single unit. 
+
+STRING:
+_______
+1.String is an object that represents sequence of characters.
+2.String is immutable object which means it is constant and cannot be changed once it has been created.
+3.java.lang.String
+4.String class implements serializable,comparable and charsequence interfaces
+
+charsequence interfaces:
+it is parent interface of String
+
+HOW TO CREATE A STRING?
+1.by string literal-memory effeciency
+2.by new keyword-always create new memory
+
+
+
+String methods:
+1.charat()
+2.length()
+3.equals()
+4.equalignorecase()
+5.isempty()
+6.contains()
+7.substring()
+8.concat()
+9.replace()
+10.indexof(char)
+11.indexof(char,index)
+12.trim()-removes spaces 
+13.value of()
+14.uppercase()
+15.lowercase()
+16.join()
+17.split()
+
+STRINGBUFFER
+____________
+1.String Buffer is an object that represents sequence of character.
+2.String Buffer is mutable.
+3.String Buffer class is a child of charsequence interface
+4.String Buffer is synchronised/THREAD-SAFE[multiple threads can't access it simutaneously]
+
+Syntax:
+StringBuffer str=new StringBuffer("i will");
+
+
+Stringbuffer methods:
+1.append()
+2.reverse()
+3.replace()
+4.insert()
+5.delete()
+6.capacity()-it gives how many characters able to store in it.
+
+
+STRINGBUILDER:
+______________
+1.String builder is an object that represents group of characters.
+2.it is mutable.
+3.string builder is a chlid of charsequence interface.
+4.string builder is non-synchronised.
+
+
+
+Stringbuilder methods:
+1.append()
+2.reverse()
+3.replace()
+4.insert()
+5.delete()
+6.capacity()-it gives how many characters able to store in it.
+
+
+EXECEPTION HANDLING:
+____________________
+Exeception is an unexpected or undesirable event which occurs during the execution of the program.therefore that distrupts the normal flow of the program instruction.
+
+
+An error is very severe problem,which can't be handled by program.
+Example:When your computer runs out of space,thre is nothing our program can do except crashing.
+
+
+                                   OBJECT-->THROWABLE_________EXEXEPTION------CHECKED EXECEPTIONS(IO OR COMPILE TIME EXCEPTION)
+                                                     |                  |
+                                                     |                  |-----UNCHECKED EXECEPTION(RUN TIME OR NULL POINTER EXECEPTION)
+                                                     |
+                                                     |
+                                                     |_________ERROR--------VIRTUAL MACHINE ERROR
+                                                                    |
+                                                                    |-------ASSERTION ERROR
+
+
+TRY BLOCK:
+This is the block where we will write our code which may give runtime exeception.
+
+CATCH BLOCK:
+This is the block where execeptions are handled.catch block is immediately followed by try block.
+
+keypoints:
+1.a try block can have multiple catch block.
+2.if there are multiple catch blocks,they should not be of generic exeception type.
+3.if there is no exeception then the catch block will not get executed.
+
+finally block:
+this is a block of code which will get executed even if the exeception occurs or not.this block will contains codes like closing connections of database,buffers,streams,etc.
+
+keypoints for finally:
+1.there is no finally block without a TRY-CATCH block.
+2.finally block is not mandatory.
+3.finally block can also can have exeception.
+4.the statement in the finally block get executed even if the try block contain control transfer statements like return,break,continue.
+
+finally block will not execute when,
+1.the thread is dead.
+2.system.exit(0) is called.
+3.when an unrecoverable exeception happens in the finally block
+
+
+throws:
+it is used to declare the exeception in the class level that may be occur.
+
+throw:
+it is used to pass the exeception.
+
+
+COLLECTION:
+___________
+1.The collection is a group of individual objects.
+
+2.collection is an interface.
+
+3.it has 3 sub interfaces:  
+ 1.list
+ 2.set
+ 3.queue
+
+
+LIST:
+1.ARRAY LIST
+2.LINKED LIST                                                                                               Iterator iterator=arraylist.iterator();
+3.STACK
+4.VECTOR
+
+ARRAY LIST:
+1.SYNTAX:
+List arrayList=new ArrayList();
+
+2.maintains insertion order.
+
+3.allows duplicates.
+
+4.it is a class in the list interface
+
+5.resizeable or growable array
+
+6.can insert heterogeneous objects
+
+7.arraylist is not synchronised
+
+8.it is not thread safe.
+
+9.default capacity-10
+
+10.growth rate:current_size+current_size/2.
+
+11.best suit for search operations but worst in insertion and deletion operations.
+
+12.it implements RandomAccess,Serializable and cloneable interfaces
+
+Arraylist methods:
+1.add()
+2.get()
+3.indexof()
+4.lastindexof()
+5.addAll()-add the values from one arraylist to another
+6.clear()
+7.remove()-removes particular value
+8.set()-to update the value in the particular index
+9.isempty()
+10.size()
+
+
+Linked list:
+same as array list but search operation is worst but insertion and deletion is best
+
+1.it not implements randomaccess interface thats why search operation is worst in linked list.
+
+List LL=new Linkedlist();
+2.maintains insertion order.
+
+3.allows duplicates.
+
+4.it is a class in the list interface
+
+5.resizeable or growable array
+
+6.can insert heterogeneous objects
+
+7.arraylist is not synchronised
+
+8.it is not thread safe.
+
+9.default capacity-10
+
+10.growth rate:current_size+current_size/2.
+
+linkedlist methods:
+1.add()
+2.addfirst()
+3.addlast()
+4.getfirst()
+5.get()
+6.remove()
+7.removefirst()
+8.removelast()
+9.poll()-it deletes the first element
+10.polllast()
+11.removefirstoccuranceof()
+12.removelastoccuranceof()
+
+
+
+SET:
+
+1.set is child interface of collection
+2.it not maintain insertion order
+3.it not allow duplicates
+4.can insert heterogeneous objects if generics not used
+
+1.HASHSET
+2.LINKEDHASHSET
+3.SORTEDSET---->navigable set----->tree set
+
+HASHSET:
+1.it is class in set
+2.it not allow duplicates
+3.it not maintain insertion order
+4.can insert heterogeneous objects
+5.default capacity is 16
+6.fill ratio or load factor:0.75 or 75%
+7.data are stored based on hashcode,so search is very effective
+8.it implements serialiable and cloneable interfaces
+9.underlying data structure is hashtable
+
+syntax:
+HashSet hs=new HashSet();
+
+hashset methods:
+1.add()
+2.addall()
+3.clear()
+4.remove()
+5.clone()
+6.is empty()
+7.contains()
+8.containsall()
+9.toArray()
+
+linked hashset
+_______________
+1.it is class in set
+2.it not allow duplicates
+3.it maintains insertion order
+4.can insert heterogeneous objects
+5.default capacity is 16
+6.fill ratio or load factor:0.75 or 75%
+7.data are stored based on hashcode,so search is very effective
+8.it implements serialiable and cloneable interfaces
+9.underlying data structure is hashtable+linked list
+
+SYNTAX:
+set linkedhashset=new LinkedhashSet();
+
+
+TREESET:
+1.Treeset is implementation class for sortedset() and navigableset()
+2.duplicates are not allowed
+3.elements will be retrieved on natural sorting order
+4.not allow heterogeneous objects
+5.ds is binary search tree
+
+treeset methods:
+1.first()
+2.last()
+3.headset()
+4.tailset()
+5.subset()
+6.heigher()
+7.lower()
+8.pollfirst()
+9.polllast()
+10.desendingset()-desending order
+
+
+MAP:
+
+1.map is not a child interface of collection
+2.it represents data in key-value pair
+3.duplicate keys are not allowed
+4.duplicate values are allowed
+
+hashmap
+linkedhash map
+tree map
+
+hashmap:
+it is the implementation class for map
+it not allow duplicate key
+only one null key is allowed
+not able to predict retrieval order
+using hashcode to store data
+initial capacity:16 and load factor:0.75
+value of the map can be fetched using its key
+
+
+hashmap methods:
+1.put()
+2.putall()
+3.clear()
+4.containskey()
+5.containsvalue()
+6.clone()
+7.isempty()
+8.keyset()-to get all keys
+9.get()
+10.values()-to get all values
+11.entryset()-to all keys and values 
+
+linked hashmap:
+it is the implementation class for map
+it not allow duplicate key
+only one null key is allowed
+insertion order maintain
+using hashcode to store data
+initial capacity:16 and load factor:0.75
+value of the map can be fetched using its key
+
+
+linkedhashmap methods:
+1.put()
+2.putall()
+3.clear()
+4.containskey()
+5.containsvalue()
+6.clone()
+7.isempty()
+8.keyset()-to get all keys
+9.get()
+10.values()-to get all values
+11.entryset()-to all keys and values 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+
